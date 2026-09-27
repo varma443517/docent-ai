@@ -1,0 +1,44 @@
+[project]
+name = "docent"
+version = "0.1.0"
+description = "Local-first AI assistant for the Kubernetes docs, built one lab a week."
+readme = "README.md"
+authors = [
+    { name = "varma443517", email = "mudunuri.hrv@outlook.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "openai>=3.19.2",
+    "typer>=0.27.2",
+]
+
+[project.scripts]
+docent = "docent.cli:app"
+
+[project.optional-dependencies]
+bench = [
+    "matplotlib>=3.11.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.24,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.9",
+]
+
+# ---- tools -------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+# E/F = pycodestyle + pyflakes basics, I = import order, B = likely bugs, UP = modern syntax
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
