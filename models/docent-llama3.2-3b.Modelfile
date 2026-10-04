@@ -1,0 +1,9 @@
+# Pinned alias for the SMALL model. Docent always calls "docent-llama3.2-3b", never the raw tag,
+# so every run sees the same context window no matter how much memory the machine has.
+# Build it with `make models` (runs: ollama create docent-llama3.2-3b -f this-file).
+FROM llama3.2:3b
+
+# Context window in tokens: prompt + retrieved docs + answer must fit inside it.
+# 8192 is plenty for Week 1's longest benchmark prompt (~4k tokens) plus the reply,
+# and it keeps the KV cache small. Ollama's own default here was 131072 (~9 GB of cache).
+PARAMETER num_ctx 8192

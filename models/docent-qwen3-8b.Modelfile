@@ -1,0 +1,5 @@
+# Pinned alias for the MID-SIZE model. Same idea as docent-llama3.2-3b.Modelfile.
+FROM qwen3:8b
+
+# Same window for both models, so speed comparisons are apples to apples.
+PARAMETER num_ctx 8192
