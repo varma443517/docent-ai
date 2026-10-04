@@ -1,0 +1,13 @@
+model,text,chars,tokens,chars_per_token
+docent-llama3.2-3b,code.py,372,92,4.04
+docent-llama3.2-3b,data.json,210,80,2.62
+docent-llama3.2-3b,identifier.txt,29,4,7.25
+docent-llama3.2-3b,manifest.yaml,486,136,3.57
+docent-llama3.2-3b,prose.txt,411,81,5.07
+docent-llama3.2-3b,telugu.txt,91,162,0.56
+docent-qwen3-8b,code.py,372,92,4.04
+docent-qwen3-8b,data.json,210,84,2.5
+docent-qwen3-8b,identifier.txt,29,4,7.25
+docent-qwen3-8b,manifest.yaml,486,147,3.31
+docent-qwen3-8b,prose.txt,411,81,5.07
+docent-qwen3-8b,telugu.txt,91,136,0.67

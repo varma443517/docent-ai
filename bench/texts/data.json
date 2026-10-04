@@ -1,0 +1,1 @@
+{"kind": "PodList", "items": [{"metadata": {"name": "web-7d4b9c8f6-x2k9p", "namespace": "default"}, "status": {"phase": "Running", "podIP": "10.244.1.17", "conditions": [{"type": "Ready", "status": "True"}]}}]}
